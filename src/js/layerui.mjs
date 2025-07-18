@@ -37,7 +37,6 @@
  */
 
 
-import { OpenSeadragon } from './osd-loader.mjs';
 import { FeatureCollectionUI } from './featurecollectionui.mjs';
 import { domObjectFromHTML } from './utils/domObjectFromHTML.mjs';
 import { datastore } from './utils/datastore.mjs';

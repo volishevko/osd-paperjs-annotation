@@ -36,7 +36,6 @@
  * 
  */
 
-import { OpenSeadragon } from './osd-loader.mjs';
 import { ToolBase } from './papertools/base.mjs';
 import {PaperOverlay} from './paper-overlay.mjs';
 import { paper } from './paperjs.mjs';

@@ -37,7 +37,6 @@
  */
 
 import {ToolBase} from './base.mjs';
-import { OpenSeadragon } from '../osd-loader.mjs';
 import { SimplifyJS } from '../utils/simplify.mjs';
 
 /**

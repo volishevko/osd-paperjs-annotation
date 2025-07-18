@@ -37,7 +37,6 @@
  */
 
 
-import { OpenSeadragon } from './osd-loader.mjs';
 import {ToolBase} from './papertools/base.mjs';
 import {DefaultTool} from './papertools/default.mjs';
 import {WandTool} from './papertools/wand.mjs';

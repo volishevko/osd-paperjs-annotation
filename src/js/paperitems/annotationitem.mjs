@@ -36,7 +36,6 @@
  * 
  */
 
-import { OpenSeadragon } from '../osd-loader.mjs';
 import { paper } from '../paperjs.mjs';
 import { AnnotationToolkit } from '../annotationtoolkit.mjs';
 

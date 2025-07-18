@@ -37,7 +37,6 @@
  */
 
 import { paper } from './paperjs.mjs';
-import { OpenSeadragon } from './osd-loader.mjs';
 
 
 // monkey patch to fix view.zoom when negative scaling is applied

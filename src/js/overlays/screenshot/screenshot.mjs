@@ -39,7 +39,6 @@
 
 import { ToolBase } from '../../papertools/base.mjs';
 import { PaperOverlay } from '../../paper-overlay.mjs';
-import { OpenSeadragon } from '../../osd-loader.mjs';
 import { paper } from '../../paperjs.mjs';
 import { changeDpiBlob } from './changedpi.mjs';
 import { domObjectFromHTML } from '../../utils/domObjectFromHTML.mjs';

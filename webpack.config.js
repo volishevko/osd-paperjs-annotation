@@ -41,14 +41,6 @@ module.exports = {
                 exclude:[path.resolve(__dirname, 'docs')]
             },
             {
-                test: require.resolve("./src/js/osd-loader.mjs"),
-                loader: "imports-loader",
-                options: {
-                    type: "module",
-                    imports: "default openseadragon OpenSeadragon",
-                },
-            },
-            {
                 test: require.resolve("./src/js/paperjs.mjs"),
                 loader: "imports-loader",
                 options: {
