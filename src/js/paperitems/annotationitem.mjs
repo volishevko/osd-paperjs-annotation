@@ -389,9 +389,9 @@ function enhancedReplaceWith(newItem){
     newItem.style = this.style; //to do: make this work with rescale properties, so that rescale.strokeWidth doesn't overwrite other props
     newItem.rescale=rescale;
     //replace in the paper hierarchy
+    paper.Item.prototype.replaceWith.call(this, newItem);
     this.emit('item-replaced',{item:newItem});
     newItem.project.emit('item-replaced',{item:newItem});
-    paper.Item.prototype.replaceWith.call(this, newItem);
     newItem.selected = this.selected;
     newItem.updateFillOpacity();
     newItem.applyRescale();
