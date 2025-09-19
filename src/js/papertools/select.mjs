@@ -147,7 +147,7 @@ class SelectTool extends AnnotationUITool{
    * @returns {boolean} Returns true if there are GeoJSON feature items, false otherwise.
    */
     doAnnotationItemsExist(){
-        return this.ps.project.getItems({match:i=>i.isGeoJSONFeature}).length>0; 
+        return this.ps?.project?.getItems({match:i=>i.isGeoJSONFeature}).length>0; 
     }
 
   /**
@@ -211,7 +211,7 @@ class SelectTool extends AnnotationUITool{
         else{
             options.overlapping=testRectangle;
         }
-        let hitResult = this.ps.project.getItems(options);
+        let hitResult = this.ps?.project?.getItems(options);
         return hitResult;
     }
 

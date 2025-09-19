@@ -329,7 +329,7 @@ class WandTool extends AnnotationUITool{
 
         //hide all annotation layers; add the viewportGroup; render; get image data; remove viewportGroup; restore visibility of layers
         // let annotationLayers = self.project.paperScope.project.layers.filter(l=>l.isGeoJSONFeatureCollection);
-        let annotations = self.project.paperScope.project.getItems({match: l=>l.isGeoJSONFeatureCollection});
+        let annotations = self.project?.paperScope?.project?.getItems({match: l=>l.isGeoJSONFeatureCollection});
         let visibility = annotations.map(l=>l.visible);
         annotations.forEach(l=>l.visible=false);
         self.project.toolLayer.addChild(viewportGroup);

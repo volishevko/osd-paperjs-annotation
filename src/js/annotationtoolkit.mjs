@@ -314,14 +314,14 @@ class AnnotationToolkit extends OpenSeadragon.EventSource{
      */
     getFeatureCollectionGroups(parentLayer){
         // return this.overlay.paperScope.project.layers.filter(l=>l.isGeoJSONFeatureCollection);
-        return this.paperScope.project.getItems({match: item=>item.isGeoJSONFeatureCollection && (parentLayer ? item.layer === parentLayer : true)});
+        return this.paperScope?.project?.getItems({match: item=>item.isGeoJSONFeatureCollection && (parentLayer ? item.layer === parentLayer : true)});
     }
     /**
      * Get the features in the toolkit.
      * @returns {paper.Item[]} The array of paper item objects representing features.
      */
     getFeatures(){
-        return this.paperScope.project.getItems({match:i=>i.isGeoJSONFeature});
+        return this.paperScope?.project?.getItems({match:i=>i.isGeoJSONFeature});
     }
      /**
      * Register an item as a GeoJSONFeature that the toolkit should track
@@ -571,7 +571,7 @@ function paperItemToggle(keepOtherSelectedItems) {
  */
 function findSelectedNewItem() {
     //to do: change this to use type=='Feature' and geometry==null to match GeoJSON spec and AnnotationItemPlaceholder definition
-    return this.project.getItems({ selected:true, match: function (i) { return i.isGeoJSONFeature && i.initializeGeoJSONFeature; } })[0];
+    return this.project?.getItems({ selected:true, match: function (i) { return i.isGeoJSONFeature && i.initializeGeoJSONFeature; } })[0];
 }
 /**
  * Find the selected items in the project scope.
@@ -579,7 +579,7 @@ function findSelectedNewItem() {
  * @returns {paper.Item[]} The array of selected items, or an empty array if none exists.
  */
 function findSelectedItems() {
-    return this.project.getItems({ selected: true, match: function (i) { return i.isGeoJSONFeature; } });
+    return this.project?.getItems({ selected: true, match: function (i) { return i.isGeoJSONFeature; } });
 }
 /**
  * Find the first selected item in the project scope.
