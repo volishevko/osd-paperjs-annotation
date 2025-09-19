@@ -435,7 +435,7 @@ class PaperOverlay extends OpenSeadragon.EventSource{
    * @see {@link autoRescaleItems}
    */
     rescaleItems(){
-        this._paperProject.getItems({match:function(o){return o.rescale}}).forEach(function(item){
+        this._paperProject?.getItems({match:function(o){return o.rescale}}).forEach(function(item){
             item.applyRescale();
         });
     }
