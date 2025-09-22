@@ -314,14 +314,20 @@ class AnnotationToolkit extends OpenSeadragon.EventSource{
      */
     getFeatureCollectionGroups(parentLayer){
         // return this.overlay.paperScope.project.layers.filter(l=>l.isGeoJSONFeatureCollection);
-        return this.paperScope?.project?.getItems({match: item=>item.isGeoJSONFeatureCollection && (parentLayer ? item.layer === parentLayer : true)});
+        if (this.paperScope?.project) {
+            return this.paperScope?.project?.getItems({match: item=>item.isGeoJSONFeatureCollection && (parentLayer ? item.layer === parentLayer : true)});
+        }
+        return []
     }
     /**
      * Get the features in the toolkit.
      * @returns {paper.Item[]} The array of paper item objects representing features.
      */
     getFeatures(){
-        return this.paperScope?.project?.getItems({match:i=>i.isGeoJSONFeature});
+        if (this.paperScope?.project) {
+            return this.paperScope?.project?.getItems({match:i=>i.isGeoJSONFeature});
+        }
+        return []
     }
      /**
      * Register an item as a GeoJSONFeature that the toolkit should track
